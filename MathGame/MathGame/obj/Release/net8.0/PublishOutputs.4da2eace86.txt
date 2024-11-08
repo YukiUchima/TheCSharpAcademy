@@ -1,0 +1,5 @@
+C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\MathGame.exe
+C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\MathGame.dll
+C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\MathGame.deps.json
+C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\MathGame.runtimeconfig.json
+C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\MathGame.pdb
