@@ -12,13 +12,13 @@ namespace MathGame
         public static void start()
         {
             Console.WriteLine("This is the math game!");
-            bool keepPlaying = true;
+            bool isGameOver = false;
             do
             {
                 int choice = MenuChoice();
-                keepPlaying = PickOperation(choice);
+                isGameOver = PickOperation(choice);
             }
-            while (keepPlaying);
+            while (!isGameOver);
         }
 
         private static int MenuChoice()
@@ -44,7 +44,7 @@ namespace MathGame
                 catch (Exception ex)
                 {
                     string msg = ex.Message;
-                    Console.WriteLine($"Invalid user input, try again:");
+                    Console.WriteLine($"Invalid user input, please pick Game Mode:");
                     continue;
                 }
             }
@@ -56,16 +56,15 @@ namespace MathGame
             if (choice == 5)
             {
                 PreviewHistory();
-                return true;
+                return false;
             }
             else if (choice == 0)
             {
                 Console.WriteLine("Exiting Game.");
-                return false;
+                return true;
             }
             else
             {
-                Console.WriteLine("To exit, enter '0'... Good luck!");
                 switch (choice)
                 {
                     case 1:
@@ -82,10 +81,10 @@ namespace MathGame
                         break;
                     default:
                         Console.WriteLine("You've decided to exit the game. Thanks for playing!");
-                        return false;
+                        return true;
                 }
             }
-            return true;
+            return false;
         }
 
         public static void PreviewHistory()

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\gitHub\\TheCSharpAcademy\\MathGame\\MathGame\\MathGame.csproj",
-      "projectName": "MathGame",
-      "projectPath": "C:\\Users\\admin\\Documents\\gitHub\\TheCSharpAcademy\\MathGame\\MathGame\\MathGame.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame\\MathGame\\MathGame.YukiUchima.csproj",
+      "projectName": "MathGame.YukiUchima",
+      "projectPath": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame\\MathGame\\MathGame.YukiUchima.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\gitHub\\TheCSharpAcademy\\MathGame\\MathGame\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame\\MathGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

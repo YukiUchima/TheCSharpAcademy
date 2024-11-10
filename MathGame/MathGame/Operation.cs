@@ -4,22 +4,26 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace MathGame
 {
     class Operation
     {
+
+        static bool isModeOver;
         public static string add()
         {
+            isModeOver = false;
             var random = new Random();
             int score = 0;
             int scorePossible = 0;
             string playTime = DateTime.Now.ToString("h:mm");
 
-            bool isGameOver = false;
 
-            while (!isGameOver)
+            while (!isModeOver)
             {
+
                 int x = random.Next(1, 9);
                 int y = random.Next(1, 9);
                 int ans = x + y;
@@ -28,24 +32,18 @@ namespace MathGame
                 try
                 {
                     int userIn = Convert.ToInt32(Console.ReadLine());
-                    if (userIn == ans)
-                    {
-                        Console.WriteLine($"The answer is correct! (Current Score: {++score}/{++scorePossible})");
-                    }
-                    else if (userIn == 0)
-                    {
-                        Console.WriteLine("Thank you for playing!");
-                        isGameOver = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Incorrect! The answer is {ans}. (Current Score: {score}/{++scorePossible})");
-                    }
+                    score += CheckAnswer(ans, userIn);
+                    Console.WriteLine($"(Current Score: {score}/{++scorePossible})");
                 }
                 catch
                 {
-                    Console.WriteLine("Invalid input, let's try a new problem...");
-                    continue;
+                    Console.WriteLine("Invalid input, do you want to try another problem? (Y/N)...");
+                    if (!Console.Read().Equals('y'))
+                    {
+                        isModeOver = true;
+                        Console.WriteLine("Leaving Game Mode - Thank you!");
+                    }
+                    Console.ReadLine();
                 }
 
             }
@@ -55,15 +53,17 @@ namespace MathGame
 
         public static string subtract()
         {
+            isModeOver = false;
             var random = new Random();
             int score = 0;
             int scorePossible = 0;
             string playTime = DateTime.Now.ToString("h:mm");
 
-            bool isGameOver = false;
 
-            while (!isGameOver)
+
+            while (!isModeOver)
             {
+
                 int x = random.Next(1, 9);
                 int y = random.Next(1, 9);
                 int ans = x - y;
@@ -72,24 +72,18 @@ namespace MathGame
                 try
                 {
                     int userIn = Convert.ToInt32(Console.ReadLine());
-                    if (userIn == ans)
-                    {
-                        Console.WriteLine($"The answer is correct! (Current Score: {++score}/{++scorePossible})");
-                    }
-                    else if (userIn == 0)
-                    {
-                        Console.WriteLine("Thank you for playing!");
-                        isGameOver = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Incorrect! The answer is {ans}. (Current Score: {score}/{++scorePossible})");
-                    }
+                    score += CheckAnswer(ans, userIn);
+                    Console.WriteLine($"(Current Score: {score}/{++scorePossible})");
                 }
                 catch
                 {
-                    Console.WriteLine("Invalid input, let's try a new problem...");
-                    continue;
+                    Console.WriteLine("Invalid input, do you want to try another problem? (Y/N)...");
+                    if (!Console.Read().Equals('y'))
+                    {
+                        isModeOver = true;
+                        Console.WriteLine("Leaving Game Mode - Thank you!");
+                    }
+                    Console.ReadLine();
                 }
 
             }
@@ -99,15 +93,15 @@ namespace MathGame
 
         public static string mult()
         {
+            isModeOver = false;
             var random = new Random();
             int score = 0;
             int scorePossible = 0;
             string playTime = DateTime.Now.ToString("h:mm");
 
-            bool isGameOver = false;
-
-            while (!isGameOver)
+            while (!isModeOver)
             {
+
                 int x = random.Next(1, 9);
                 int y = random.Next(1, 9);
                 int ans = x * y;
@@ -116,24 +110,18 @@ namespace MathGame
                 try
                 {
                     int userIn = Convert.ToInt32(Console.ReadLine());
-                    if (userIn == ans)
-                    {
-                        Console.WriteLine($"The answer is correct! (Current Score: {++score}/{++scorePossible})");
-                    }
-                    else if (userIn == 0)
-                    {
-                        Console.WriteLine("Thank you for playing!");
-                        isGameOver = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Incorrect! The answer is {ans}. (Current Score: {score}/{++scorePossible})");
-                    }
+                    score += CheckAnswer(ans, userIn);
+                    Console.WriteLine($"(Current Score: {score}/{++scorePossible})");
                 }
                 catch
                 {
-                    Console.WriteLine("Invalid input, let's try a new problem...");
-                    continue;
+                    Console.WriteLine("Invalid input, do you want to try another problem? (Y/N)...");
+                    if (!Console.Read().Equals('y'))
+                    {
+                        isModeOver = true;
+                        Console.WriteLine("Leaving Game Mode - Thank you!");
+                    }
+                    Console.ReadLine();
                 }
 
             }
@@ -143,14 +131,13 @@ namespace MathGame
 
         public static string div()
         {
+            isModeOver = false;
             var random = new Random();
             int score = 0;
             int scorePossible = 0;
             string playTime = DateTime.Now.ToString("h:mm");
 
-            bool isGameOver = false;
-
-            while (!isGameOver)
+            while (!isModeOver)
             {
                 int x, y;
                 do
@@ -161,33 +148,40 @@ namespace MathGame
                 while (x % y != 0);
                 int ans = x / y;              
 
-                Console.WriteLine($"What is the product of {x} and {y}? ");
+                Console.WriteLine($"What is the quotient of {x} and {y}? ");
                 try
                 {
                     int userIn = Convert.ToInt32(Console.ReadLine());
-                    if (userIn == ans)
-                    {
-                        Console.WriteLine($"The answer is correct! (Current Score: {++score}/{++scorePossible})");
-                    }
-                    else if (userIn == 0)
-                    {
-                        Console.WriteLine("Thank you for playing!");
-                        isGameOver = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Incorrect! The answer is {ans}. (Current Score: {score}/{++scorePossible})");
-                    }
+                    score += CheckAnswer(ans, userIn);
+                    Console.WriteLine($"(Current Score: {score}/{++scorePossible})");
                 }
                 catch
                 {
-                    Console.WriteLine("Invalid input, let's try a new problem...");
-                    continue;
+                    Console.WriteLine("Invalid input, do you want to try another problem? (Y/N)...");
+                    if (!Console.Read().Equals('y'))
+                    {
+                        isModeOver = true;
+                        Console.WriteLine("Leaving Game Mode - Thank you!");
+                    }
+                    Console.ReadLine();
                 }
-
             }
 
             return $"Time({playTime}) - 'Divide' Game Score: {score}/{scorePossible}";
+        }
+
+        private static int CheckAnswer(int answer, int userAnswer)
+        {
+            if (answer == userAnswer)
+            {
+                Console.Write("The answer is correct! ");
+                return 1;
+            }
+            else
+            {
+                Console.Write($"Incorrect! The answer is {answer}. ");
+                return 0;
+            }
         }
 
     }   
