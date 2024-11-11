@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MathGame.YukiUchima")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4080d2eaec738252d810eb1f400e28ab991039ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f227f273f7ff60bd12ea2921518e1ec9912a73ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("MathGame.YukiUchima")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MathGame.YukiUchima")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

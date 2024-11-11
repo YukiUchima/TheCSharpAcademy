@@ -5,32 +5,32 @@ namespace MathGame.YukiUchima
     class UserInteraction
     {
         private static List<Game> gameHistory = new List<Game>();
+        private static List<string> choiceList = ["a", "s", "m", "d", "h", "r", "e"];
         public static void StartGame()
         {
             Console.WriteLine("This is the math game!");
             bool isGameOver = false;
             do
             {
-                int choice = PickGameMode();
+                string choice = PickGameMode();
                 isGameOver = RunGameMode(choice);
             }
             while (!isGameOver);
         }
 
-        static int PickGameMode()
+        static string PickGameMode()
         {
-            List<int> choiceList = [0, 1, 2, 3, 4, 5];
-            int optionValue;
+            string optionValue;
 
             Console.WriteLine("Pick Your Game Mode!");
-            Console.WriteLine("\n\t[1] - Add\n\t[2] - Subtract\n\t[3] - Multiply\n\t[4] - Divide\n\t[5] - Preview Game History\n\t[0] - EXIT");
+            Console.WriteLine("\n\t[A] - Add\n\t[S] - Subtract\n\t[M] - Multiply\n\t[D] - Divide\n\t[H] - Preview Game History\n\t[R] - Random\n\t[E] - EXIT");
 
             // Requests user input until valid input has been chosen
             while (true)
             {
                 try
                 {
-                    optionValue = Convert.ToInt32(Console.ReadLine());
+                    optionValue = Console.ReadLine().ToLower();
                     if (!choiceList.Contains(optionValue))
                     {
                         throw new Exception();
@@ -72,35 +72,44 @@ namespace MathGame.YukiUchima
             }
         }
 
-        static bool RunGameMode(int choice)
+        static bool RunGameMode(string choice)
         {
-            if (choice == 5)
+            if (choice.Equals("h"))
             {
                 Helpers.PreviewHistory();
                 return false;
             }
-            else if (choice == 0)
+            else if (choice.Equals("e"))
             {
                 Console.WriteLine("Game Over. Thanks for playing!");
                 return true;
             }
             else
             {
+                string gameMode;
                 Console.Clear();
-                GameLevel level = PickDifficulty();
-
-                switch (choice)
+                if (choice.Equals("r"))
                 {
-                    case 1:
+                    gameMode = choiceList[new Random().Next(0, 3)];
+                }
+                else
+                {
+                    gameMode = choice;
+                }
+
+                GameLevel level = PickDifficulty();
+                switch (gameMode)
+                {
+                    case "a":
                         GameModes.RunMode(GameType.Addition, level);
                         break;
-                    case 2:
+                    case "s":
                         GameModes.RunMode(GameType.Subtract, level);
                         break;
-                    case 3:
+                    case "m":
                         GameModes.RunMode(GameType.Multiply, level);
                         break;
-                    case 4:
+                    case "d":
                         GameModes.RunMode(GameType.Divide, level);
                         break;
                     default:

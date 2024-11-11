@@ -13,7 +13,7 @@ namespace MathGame.YukiUchima
                 
                 foreach (Game game in GameHistory)
                 {
-                    Console.WriteLine($"{game.Time} - {game.Type} Mode Score: {game.Score}/{game.PossibleScore} pts");
+                    Console.WriteLine($"{game.Time} - {game.Type} Mode Score: {game.Score}/{game.PossibleScore} pts [GameTime: {game.ElapsedTime}]");
                 }
                 Console.WriteLine("----------------[End History]----------------\n");
             }

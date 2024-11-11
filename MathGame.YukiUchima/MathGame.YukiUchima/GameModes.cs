@@ -1,4 +1,5 @@
 ﻿using MathGame.YukiUchima.Models;
+using System;
 
 namespace MathGame.YukiUchima
 {
@@ -15,6 +16,7 @@ namespace MathGame.YukiUchima
             currentMode.Type = type;
             currentMode.Score = 0;
             currentMode.PossibleScore = 0;
+            DateTime startTime = DateTime.Now;
             
             if (level == GameLevel.Easy)
             {
@@ -81,7 +83,10 @@ namespace MathGame.YukiUchima
                 }
             }
 
-            currentMode.Time = DateTime.Now.ToString("h:mm");
+            DateTime endTime = DateTime.Now;
+            currentMode.Time = endTime.ToString("h:mm");
+            TimeSpan ElapsedTime = (endTime - startTime).Duration();
+            currentMode.ElapsedTime = $"{ElapsedTime:mm\\:ss}";
             Helpers.GameHistory.Add(currentMode);
         }     
 
