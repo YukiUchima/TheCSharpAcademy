@@ -1,0 +1,15 @@
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\bin\Debug\net8.0\YukiUchima.MathGame.exe
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\bin\Debug\net8.0\YukiUchima.MathGame.deps.json
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\bin\Debug\net8.0\YukiUchima.MathGame.runtimeconfig.json
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\bin\Debug\net8.0\YukiUchima.MathGame.dll
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\bin\Debug\net8.0\YukiUchima.MathGame.pdb
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.AssemblyInfo.cs
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.sourcelink.json
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.dll
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\refint\YukiUchima.MathGame.dll
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.pdb
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\YukiUchima.MathGame.genruntimeconfig.cache
+C:\Users\admin\Documents\github\TheCSharpAcademy\YukiUchima.MathGame\YukiUchima.MathGame\obj\Debug\net8.0\ref\YukiUchima.MathGame.dll
