@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "YukiUchima.MathGame/1.0.0": {
+      "MathGame.YukiUchima/1.0.0": {
         "runtime": {
-          "YukiUchima.MathGame.dll": {}
+          "MathGame.YukiUchima.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "YukiUchima.MathGame/1.0.0": {
+    "MathGame.YukiUchima/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
