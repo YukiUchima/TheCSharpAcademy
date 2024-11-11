@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YukiUchima.MathGame", "YukiUchima.MathGame\YukiUchima.MathGame.csproj", "{A7BD67FF-4B46-4B6A-A8ED-D3A0A4E1B78F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathGame.YukiUchima", "MathGame.YukiUchima\MathGame.YukiUchima.csproj", "{E9FA6436-DC29-4A86-A95E-42976FA7EAED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A7BD67FF-4B46-4B6A-A8ED-D3A0A4E1B78F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7BD67FF-4B46-4B6A-A8ED-D3A0A4E1B78F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7BD67FF-4B46-4B6A-A8ED-D3A0A4E1B78F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7BD67FF-4B46-4B6A-A8ED-D3A0A4E1B78F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9FA6436-DC29-4A86-A95E-42976FA7EAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9FA6436-DC29-4A86-A95E-42976FA7EAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9FA6436-DC29-4A86-A95E-42976FA7EAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9FA6436-DC29-4A86-A95E-42976FA7EAED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {875DE638-78ED-44F7-BC5E-539E9F7E3747}
+		SolutionGuid = {6D7FF7F5-A092-49FD-A9F1-BA847EE200B5}
 	EndGlobalSection
 EndGlobal

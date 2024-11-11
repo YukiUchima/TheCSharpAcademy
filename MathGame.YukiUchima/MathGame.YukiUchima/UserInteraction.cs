@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YukiUchima.MathGame.Models;
+﻿using MathGame.YukiUchima.Models;
 
-namespace YukiUchima.MathGame
+namespace MathGame.YukiUchima
 {
     internal class UserInteraction
     {
@@ -106,16 +101,16 @@ namespace YukiUchima.MathGame
                 switch (gameMode)
                 {
                     case "a":
-                        GameModes.RunMode(GameType.Addition, level);
+                        GameMode.RunMode(GameType.Addition, level);
                         break;
                     case "s":
-                        GameModes.RunMode(GameType.Subtract, level);
+                        GameMode.RunMode(GameType.Subtract, level);
                         break;
                     case "m":
-                        GameModes.RunMode(GameType.Multiply, level);
+                        GameMode.RunMode(GameType.Multiply, level);
                         break;
                     case "d":
-                        GameModes.RunMode(GameType.Divide, level);
+                        GameMode.RunMode(GameType.Divide, level);
                         break;
                     default:
                         break;
@@ -124,4 +119,5 @@ namespace YukiUchima.MathGame
             return false;
         }
     }
+
 }

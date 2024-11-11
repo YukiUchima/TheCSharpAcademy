@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YukiUchima.MathGame.Models;
+﻿
 
-namespace YukiUchima.MathGame
+using MathGame.YukiUchima.Models;
+
+namespace MathGame.YukiUchima
 {
-    internal class GameModes
+    internal class GameMode
     {
 
         private static bool isModeOver;
@@ -121,4 +118,5 @@ namespace YukiUchima.MathGame
             Console.Clear();
         }
     }
+
 }

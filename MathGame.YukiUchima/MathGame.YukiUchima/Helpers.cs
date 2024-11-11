@@ -1,9 +1,8 @@
-﻿
-using YukiUchima.MathGame.Models;
+﻿using MathGame.YukiUchima.Models;
 
-namespace YukiUchima.MathGame
+namespace MathGame.YukiUchima
 {
-    class Helpers
+    internal class Helpers
     {
         internal static List<Game> GameHistory = new List<Game>();
         internal static void PreviewHistory()
@@ -42,4 +41,5 @@ namespace YukiUchima.MathGame
             return userIn;
         }
     }
+
 }

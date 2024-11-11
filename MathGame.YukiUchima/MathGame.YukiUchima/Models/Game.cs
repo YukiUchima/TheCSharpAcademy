@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace YukiUchima.MathGame.Models;
+﻿
+namespace MathGame.YukiUchima.Models;
 
 internal class Game
 {
@@ -23,3 +18,4 @@ internal enum GameType
     Multiply,
     Divide
 }
+

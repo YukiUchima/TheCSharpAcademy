@@ -1,10 +1,10 @@
-﻿namespace YukiUchima.MathGame
+﻿namespace MathGame.YukiUchima
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            UserInteraction.StartGame();
+            Console.WriteLine("Hello, World!");
         }
     }
 }

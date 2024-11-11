@@ -1,5 +1,5 @@
 ﻿
-namespace YukiUchima.MathGame.Models;
+namespace MathGame.YukiUchima.Models;
 
 internal class Difficulty
 {

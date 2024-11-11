@@ -1,5 +1,0 @@
-C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\YukiUchima.MathGame.exe
-C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\YukiUchima.MathGame.dll
-C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\YukiUchima.MathGame.deps.json
-C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\YukiUchima.MathGame.runtimeconfig.json
-C:\Users\admin\Documents\github\TheCSharpAcademy\PublishedProjects\MathGame\YukiUchima.MathGame.pdb
