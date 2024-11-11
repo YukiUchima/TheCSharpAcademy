@@ -47,12 +47,10 @@ namespace MathGame.YukiUchima
 
         static GameLevel PickDifficulty()
         {
-            GameLevel level;
             Console.WriteLine("Pick your difficulty level:");
             Console.WriteLine("\t(E)asy\n\t(M)edium\n\t(H)ard");
             string choice = Console.ReadLine();
-            bool invalidLevelChoice = true;
-
+            
             while (true)
             {
                 switch (choice)
@@ -66,9 +64,9 @@ namespace MathGame.YukiUchima
                     default:
                         Console.WriteLine("Incorrect input, try again.");
                         Console.WriteLine("Type 'e' for easy, 'm' for medium, or 'h' for hard level...");
+                        choice = Console.ReadLine();
                         break;
-                };
-                choice = Console.ReadLine();
+                }
             }
         }
 

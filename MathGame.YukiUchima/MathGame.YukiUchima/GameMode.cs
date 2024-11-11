@@ -42,7 +42,7 @@ namespace MathGame.YukiUchima
             {
                 if (currentMode.Type == GameType.Divide)
                 {
-                    int multiplier = random.Next(1, maxValue), offSetter;
+                    int multiplier = random.Next(1, maxValue);
                     do
                     {
                         x = random.Next(minValue, maxValue) * multiplier;
