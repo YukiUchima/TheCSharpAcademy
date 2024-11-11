@@ -1,33 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MathGame.YukiUchima.Models;
 
 namespace MathGame.YukiUchima
 {
     class UserInteraction
     {
-        private static List<string> gameHistory = [];
-        public static void start()
+        private static List<Game> gameHistory = new List<Game>();
+        public static void StartGame()
         {
             Console.WriteLine("This is the math game!");
             bool isGameOver = false;
             do
             {
-                int choice = MenuChoice();
-                isGameOver = PickGameModes(choice);
+                int choice = PickGameMode();
+                isGameOver = RunGameMode(choice);
             }
             while (!isGameOver);
         }
 
-        private static int MenuChoice()
+        static int PickGameMode()
         {
             List<int> choiceList = [0, 1, 2, 3, 4, 5];
             int optionValue;
 
-            Console.WriteLine("\nPick Your Game Mode!");
-            Console.WriteLine("[1] - Add\n[2] - Subtract\n[3] - Multiply\n[4] - Divide\n[5] - Preview Game History\n[0] - EXIT");
+            Console.WriteLine("Pick Your Game Mode!");
+            Console.WriteLine("\n\t[1] - Add\n\t[2] - Subtract\n\t[3] - Multiply\n\t[4] - Divide\n\t[5] - Preview Game History\n\t[0] - EXIT");
 
             // Requests user input until valid input has been chosen
             while (true)
@@ -41,67 +37,77 @@ namespace MathGame.YukiUchima
                     }
                     return optionValue;
                 }
-                catch (Exception ex)
+                catch
                 {
-                    string msg = ex.Message;
                     Console.WriteLine($"Invalid user input, please pick Game Mode:");
                     continue;
                 }
             }
         }
 
+        static GameLevel PickDifficulty()
+        {
+            GameLevel level;
+            Console.WriteLine("Pick your difficulty level:");
+            Console.WriteLine("\t(E)asy\n\t(M)edium\n\t(H)ard");
+            string choice = Console.ReadLine();
+            bool invalidLevelChoice = true;
 
-        private static bool PickGameModes(int choice)
+            while (true)
+            {
+                switch (choice)
+                {
+                    case "e":
+                        return GameLevel.Easy;
+                    case "m":
+                        return GameLevel.Medium;
+                    case "h":
+                        return GameLevel.Hard;
+                    default:
+                        Console.WriteLine("Incorrect input, try again.");
+                        Console.WriteLine("Type 'e' for easy, 'm' for medium, or 'h' for hard level...");
+                        break;
+                };
+                choice = Console.ReadLine();
+            }
+        }
+
+        static bool RunGameMode(int choice)
         {
             if (choice == 5)
             {
-                PreviewHistory();
+                Helpers.PreviewHistory();
                 return false;
             }
             else if (choice == 0)
             {
-                Console.WriteLine("Exiting Game.");
+                Console.WriteLine("Game Over. Thanks for playing!");
                 return true;
             }
             else
             {
+                Console.Clear();
+                GameLevel level = PickDifficulty();
+
                 switch (choice)
                 {
                     case 1:
-                        gameHistory.Add(GameModes.add());
+                        GameModes.RunMode(GameType.Addition, level);
                         break;
                     case 2:
-                        gameHistory.Add(GameModes.subtract());
+                        GameModes.RunMode(GameType.Subtract, level);
                         break;
                     case 3:
-                        gameHistory.Add(GameModes.mult());
+                        GameModes.RunMode(GameType.Multiply, level);
                         break;
                     case 4:
-                        gameHistory.Add(GameModes.div());
+                        GameModes.RunMode(GameType.Divide, level);
                         break;
                     default:
-                        Console.WriteLine("You've decided to exit the game. Thanks for playing!");
-                        return true;
+                        break;
                 }
             }
             return false;
-        }
-
-        public static void PreviewHistory()
-        {
-            if (gameHistory.Count > 0)
-            {
-                Console.WriteLine("\nPreviewing History\n---------------[Start History]---------------");
-                foreach (var history in gameHistory)
-                {
-                    Console.WriteLine(history);
-                }
-                Console.WriteLine("----------------[End History]----------------\n");
-            }
-            else
-            {
-                Console.WriteLine("\n No History Preview Available...\n");
-            }
         }
     }
 }

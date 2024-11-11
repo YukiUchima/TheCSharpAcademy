@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{EBB25F86-836B-4013-B4EF-1E56D47354FB}|MathGame.YukiUchima\\MathGame.YukiUchima.csproj|c:\\users\\admin\\documents\\github\\thecsharpacademy\\mathgame.yukiuchima\\mathgame.yukiuchima\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EBB25F86-836B-4013-B4EF-1E56D47354FB}|MathGame.YukiUchima\\MathGame.YukiUchima.csproj|solutionrelative:mathgame.yukiuchima\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBB25F86-836B-4013-B4EF-1E56D47354FB}|MathGame.YukiUchima\\MathGame.YukiUchima.csproj|c:\\users\\admin\\documents\\github\\thecsharpacademy\\mathgame.yukiuchima\\mathgame.yukiuchima\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBB25F86-836B-4013-B4EF-1E56D47354FB}|MathGame.YukiUchima\\MathGame.YukiUchima.csproj|solutionrelative:mathgame.yukiuchima\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 202,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Helpers.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame.YukiUchima\\MathGame.YukiUchima\\Helpers.cs",
+              "RelativeDocumentMoniker": "MathGame.YukiUchima\\Helpers.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame.YukiUchima\\MathGame.YukiUchima\\Helpers.cs",
+              "RelativeToolTip": "MathGame.YukiUchima\\Helpers.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T00:18:08.099Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,7 +49,7 @@
               "RelativeDocumentMoniker": "MathGame.YukiUchima\\GameModes.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame.YukiUchima\\MathGame.YukiUchima\\GameModes.cs",
               "RelativeToolTip": "MathGame.YukiUchima\\GameModes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwCQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T23:41:55.221Z",
               "EditorCaption": ""
@@ -45,7 +62,7 @@
               "RelativeDocumentMoniker": "MathGame.YukiUchima\\UserInteraction.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame.YukiUchima\\MathGame.YukiUchima\\UserInteraction.cs",
               "RelativeToolTip": "MathGame.YukiUchima\\UserInteraction.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwFsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T23:40:44.581Z",
               "EditorCaption": ""
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "MathGame.YukiUchima\\Program.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\github\\TheCSharpAcademy\\MathGame.YukiUchima\\MathGame.YukiUchima\\Program.cs",
               "RelativeToolTip": "MathGame.YukiUchima\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T23:39:06.666Z",
               "EditorCaption": ""
