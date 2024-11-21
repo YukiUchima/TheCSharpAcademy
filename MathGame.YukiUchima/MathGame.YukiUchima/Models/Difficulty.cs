@@ -1,14 +1,8 @@
-﻿
+﻿using static MathGame.YukiUchima.Enums;
+
 namespace MathGame.YukiUchima.Models;
 
 internal class Difficulty
 {
-    public GameLevel Level { get; set; }
-}
-
-internal enum GameLevel
-{
-    Easy,
-    Medium,
-    Hard
+    public static DifficultyLevel Level { get; set; }
 }
