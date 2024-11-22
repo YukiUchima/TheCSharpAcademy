@@ -1,9 +1,10 @@
 ﻿
 using System.Text.RegularExpressions;
+using CalculatorLibrary;
 
 namespace Calculator.YukiUchima;
 
-internal class Program
+internal class CalculatorProgram
 {
     private static char _operation;
     private static double _result;
@@ -14,6 +15,10 @@ internal class Program
         // Display title
         Console.WriteLine("Console Calculator in C#");
         Console.WriteLine("------------------------\n");
+
+        //Create ONE instance of a calculator object
+        //CalculatorLibrary.Calculator calculator = new CalculatorLibrary.Calculator();
+        CalculatorLibrary.Calculator calculator = new CalculatorLibrary.Calculator() ;
 
         while (!endApp)
         {
@@ -58,7 +63,8 @@ internal class Program
             {
                 try
                 {
-                    _result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                    _result = calculator.DoOperation(cleanNum1, cleanNum2, op);
+                    
                     if (double.IsNaN(_result))
                     {
                         Console.WriteLine("The operation yields a mathematical error.\n");
@@ -80,6 +86,7 @@ internal class Program
 
             Console.WriteLine("\n"); // Friendly linespacing.
         }
+        calculator.Finish();
         return;
     }
         internal static string GetCalculateNumber(int currentInputNumber)
