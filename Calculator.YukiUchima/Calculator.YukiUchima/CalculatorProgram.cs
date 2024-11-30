@@ -1,35 +1,39 @@
 ﻿using CalculatorLibrary.Models;
-using CalculatorLibrary;
 using Spectre.Console;
 
-namespace Calculator.YukiUchima;
+namespace CalculatorLibrary.YukiUchima;
 
 internal class CalculatorProgram
 {
-    private static char _operation;
-    private static double _result;
+    private static char s_operation;
+    private static double s_newResult;
+    private static double? s_previousResult = null;
+    private static double s_userInput1;
+    private static double? s_userInput2 = null;
     
     static void Main(string[] args)
     {
         bool endApp = false;
 
-        // Display title
         Console.WriteLine("Console Calculator in C#");
         Console.WriteLine("------------------------\n");
 
-        // Create ONE instance of a calculator object
-        CalculatorLibrary.Calculator calculator = new CalculatorLibrary.Calculator();
+        Calculator calculator = new Calculator();
 
+        string usePreviousResult;
         while (!endApp)
         {
-            // Ask user to pick an option
+            if (Calculator.calculationsCount > 0)
+            {
+                Console.WriteLine($"Calculation(s) Completed: {Calculator.calculationsCount}");
+            }
+
             var selectedOp = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                 .Title("Choose an option from the following list: ")
                 .AddChoices(Enums.OpDescription.Values.ToList())
                 );
-
-            var selectedOpType = Enums.OpDescription.First(opDesc => opDesc.Value == selectedOp).Key;
+            Enums.OperationType selectedOpType = Enums.OpDescription.First(opDesc => opDesc.Value == selectedOp).Key;
 
             if (selectedOpType == Enums.OperationType.ShowCalculations)
             {
@@ -37,7 +41,8 @@ internal class CalculatorProgram
             }
             else if (selectedOpType == Enums.OperationType.DeleteCalculations)
             {
-                CalculatorLibrary.Calculator._CalculationsList.Clear();
+                Calculator.calculationsList.Clear();
+                s_previousResult = null;
                 Console.Clear();
                 Console.WriteLine("Memory Deleted - Removed Previous Calculations");
             }
@@ -45,38 +50,47 @@ internal class CalculatorProgram
             {
                 try
                 {
-                    double numInput1;
-                    double numInput2;
-
-                    //Get user's first number
-                    numInput1 = Calculation.GetCalculateNumber(1);
-                    
-                    if (selectedOpType.Equals(Enums.OperationType.SquareRoot) || selectedOpType.Equals(Enums.OperationType.TenX)) {
-                        _result = calculator.DoOperation(numInput1, selectedOpType);
-                        Calculation newCalculation = new Calculation(numInput1, selectedOpType, _result);
-                        CalculatorLibrary.Calculator._CalculationsList.Add(newCalculation);
+                    if (selectedOpType.Equals(Enums.OperationType.Cosine) || selectedOpType.Equals(Enums.OperationType.Sine))
+                    {
+                        s_userInput1 = Calculation.GetCalculateNumber(1);
+                        s_userInput1 = Calculator.CheckTrigValue(s_userInput1);
+                        s_newResult = calculator.DoOperation(s_userInput1, selectedOpType);
+                    }
+                    else if (selectedOpType.Equals(Enums.OperationType.SquareRoot) || selectedOpType.Equals(Enums.OperationType.TenX))
+                    {
+                        s_userInput1 = Calculation.GetCalculateNumber(1);
+                        s_newResult = calculator.DoOperation(s_userInput1, selectedOpType);
                     }
                     else
                     {
-                        //Get user's second number
-                        numInput2 = Calculation.GetCalculateNumber(2);
-                        _result = calculator.DoOperation(numInput1, selectedOpType, numInput2);
-                        Calculation newCalculation = new Calculation(numInput1, selectedOpType, _result, numInput2);
-                        CalculatorLibrary.Calculator._CalculationsList.Add(newCalculation);
+                        usePreviousResult = "No";
+                        if (s_previousResult.HasValue)
+                        {
+                            usePreviousResult = AnsiConsole.Prompt(
+                                new SelectionPrompt<string>()
+                                .Title("Would you like to use the previous result for your next calculation? ")
+                                .AddChoices(new[] {"Yes", "No"})
+                                );
+                        }
+                        s_userInput1 = usePreviousResult == "Yes" ? (double) s_previousResult : Calculation.GetCalculateNumber(1);
+                        s_userInput2 = Calculation.GetCalculateNumber(2);
+                        s_newResult = calculator.DoOperation(s_userInput1, selectedOpType, s_userInput2);
                     }
+                    Calculation newCalculation = new Calculation(s_userInput1, selectedOpType, s_newResult, s_userInput2);
+                    Calculator.calculationsList.Add(newCalculation);
+                    Calculator.calculationsCount++;
+                    s_previousResult = s_newResult;
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.ToString());
                 }
             }
-            
+
             Console.WriteLine("------------------------\n");
-            // Wait for the user to respond before closing.
             Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
             if (Console.ReadLine() == "n") endApp = true;
-
-            Console.WriteLine("\n"); // Friendly linespacing.
+            Console.Clear();
         }
         calculator.Finish();
         return;

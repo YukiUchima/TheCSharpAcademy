@@ -9,9 +9,11 @@ public class Enums
             { Enums.OperationType.Divide, "Divide" },
             { Enums.OperationType.ShowCalculations, "Show Previous Calculations" },
             { Enums.OperationType.DeleteCalculations, "Delete Previous Calculations Memory" },
-            { Enums.OperationType.SquareRoot, "Square Root" },
+            { Enums.OperationType.SquareRoot, "SquareRoot" },
             { Enums.OperationType.Power, "Power" },
             { Enums.OperationType.TenX, "Mutipliter (10x)" },
+            { Enums.OperationType.Cosine, "cos()" },
+            { Enums.OperationType.Sine, "sin()" },
         };
     public enum OperationType
     {
@@ -28,3 +30,4 @@ public class Enums
         DeleteCalculations,
     }
 }
+
