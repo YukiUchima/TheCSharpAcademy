@@ -23,10 +23,7 @@ public class Calculator
     public double DoOperation(double num1, Enums.OperationType op, double? num2 = null)
     {
         double? result = double.NaN;
-
-        Func<double, double?, double> sumOp = (x, y) =>  x + y ?? 0;
-        Func<int, int, int> multiplyOp = (x, y) =>  x * y ;
-
+        
         if (!num2.HasValue)
         {
             writer.WriteStartObject();
@@ -68,7 +65,7 @@ public class Calculator
             switch (op)
             {
                 case Enums.OperationType.Add:
-                    result = sumOp(num1, num2);
+                    result = num1 + num2;
                     writer.WriteValue("Add");
                     break;
                 case Enums.OperationType.Subtract:
