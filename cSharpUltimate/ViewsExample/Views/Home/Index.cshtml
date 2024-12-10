@@ -1,0 +1,30 @@
+﻿@using ViewsExample.Models;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["appTitle"]</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    @* @Html.Raw(alertMessage) do not take in user input for this, since malware can be injected
+     <h2>Welcome! This is a: @razorVariable</h2> *@
+    
+    <p>These people are on the VIP list</p>
+    @{
+        List<Person> people = (List<Person>)ViewData["people"];
+        foreach (Person person in people)
+        {
+            <div>
+                @person.Name
+
+                @if (person.DateOfBirth != null)
+                {
+                    <span>@person.DateOfBirth.Value.ToString("mm/dd/yyyy")</span>
+                }
+            </div>
+
+        }
+    }
+</body>
+</html>
