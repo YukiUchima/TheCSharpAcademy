@@ -1,2 +1,2 @@
 # TheCSharpAcademy
-# 12/06 Connected Work PC to Repo
+# 1/26 Connected new Win10 LTSC to Repo
